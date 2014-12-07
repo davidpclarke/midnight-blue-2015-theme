@@ -158,22 +158,72 @@ img.wp-post-image {
     IMAGES
 \*------------------------------------*/
 
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+	height: auto;
+}
 
+.border-macbook {
+	background: url("img/device-border-macbook-320.png") no-repeat scroll center top transparent;
+	overflow: hidden;
+	padding: 18px calc(50% - 112px) 30px calc(50% - 112px);
+	padding: 18px -webkit-calc(50% - 112px) 30px -webkit-calc(50% - 112px);
+	height: auto !important;
+}
+
+.border-ipad-mini {
+	background: url("img/device-border-ipad-mini-320.png") no-repeat scroll center top transparent;
+	overflow: hidden;
+	padding: 52px calc(50% - 119px) 60px calc(50% - 117px);
+	padding: 52px -webkit-calc(50% - 119px) 60px -webkit-calc(50% - 117px);
+	height: auto !important;
+}
+
+.border-ipad-mini-landscape {
+	background: url("img/device-border-ipad-mini-landscape-320.png") no-repeat scroll center top transparent;
+	overflow: hidden;
+	padding: 25px calc(50% - 105px) 21px calc(50% - 112px);
+	padding: 25px -webkit-calc(50% - 105px) 21px -webkit-calc(50% - 112px);
+	height: auto !important;
+}
+
+.border-iphone5 {
+	background: url("img/device-border-iphone5-580.png") no-repeat scroll center top transparent;
+	overflow: hidden;
+	padding: 70px calc(50% - 70px) 66px calc(50% - 69px);
+	padding: 70px -webkit-calc(50% - 70px) 66px -webkit-calc(50% - 69px);
+	height: auto !important;
+}
+
+.picture-frame-container-portrait {
+	padding: 20px calc(50% - 115px) 25px calc(50% - 115px);
+	padding: 20px -webkit-calc(50% - 115px) 25px -webkit-calc(50% - 115px);
+}
+
+.border-picture-frame-portrait {
+	background-color: #FFFFE0;
+	height: auto !important;
+	padding: 20px;
+	border: solid 15px #222;
+	border-right-color: #181818;
+	border-bottom-color: #181818;
+	box-shadow:  0px 10px 20px #000;
+}
+
+.bg-dark-blue { background-color: #34495E !important; }            /* MIDNIGHT BLUE */
+.bg-green { background-color: #34495E !important; }                /* NEPHRITIS */
+.bg-red { background-color: #34495E !important; }                  /* POMEGRANATE */
+.bg-orange { background-color: #34495E !important; }               /* PUMPKIN */
+.bg-purple { background-color: #34495E !important; }               /* WISTERIA */
+.bg-blue { background-color: #34495E !important; }                 /* BELIZE HOLE */
+.bg-yellow { background-color: #34495E !important; }               /* ORANGE */
+.bg-lime { background-color: #34495E !important; }                 /* GREEN SEA */
+.bg-aqua { background-color: #34495E !important; }                 /* ASBESTOS */
 
 /*------------------------------------*\
 	TYPOGRAPHY
 \*------------------------------------*/
-
-@font-face {
-	font-family:'Font-Name';
-	src:url('fonts/font-name.eot');
-	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font-name.woff') format('woff'),
-		url('fonts/font-name.ttf') format('truetype'),
-		url('fonts/font-name.svg#font-name') format('svg');
-    font-weight:normal;
-    font-style:normal;
-}
 
 h1 {
 	color:#1ABC9C;
@@ -181,6 +231,17 @@ h1 {
 	font-family: 'Comfortaa', cursive;
 	font-size: 40px;
 	margin: 0px;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.4;
+	font-family: Lato,Helvetica,Arial,sans-serif;
+	color: #34495e;
+	width: 80%;
+	max-width: 660px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*------------------------------------*\
@@ -206,6 +267,45 @@ h1 {
 		width: calc(50% - 10px); 
 		padding: 5px;
 	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.55;
+	}
+
+  .border-macbook {
+    background: url("img/device-border-macbook-580.png") no-repeat scroll center top transparent;
+    padding: 33px calc(50% - 204px) 50px calc(50% - 204px);
+    padding: 33px -webkit-calc(50% - 204px) 50px -webkit-calc(50% - 204px);
+  }
+
+  .border-ipad-mini {
+    background: url("img/device-border-ipad-mini-580.png") no-repeat scroll center top transparent;
+    padding: 71px calc(50% - 163px) 75px calc(50% - 157px);
+    padding: 71px -webkit-calc(50% - 163px) 75px -webkit-calc(50% - 157px);
+  }
+
+  .border-ipad-mini-landscape {
+    background: url("img/device-border-ipad-mini-landscape-580.png") no-repeat scroll center top transparent;
+    padding: 45px calc(50% - 192px) 36px calc(50% - 204px);
+    padding: 45px -webkit-calc(50% - 192px) 36px -webkit-calc(50% - 204px);
+  }
+
+  .border-iphone5 {
+    background: url("img/device-border-iphone5-580.png") no-repeat scroll center top transparent;
+    padding: 70px calc(50% - 70px) 66px calc(50% - 69px);
+    padding: 70px -webkit-calc(50% - 70px) 66px -webkit-calc(50% - 69px);
+  }
+
+  .picture-frame-container-portrait {
+    padding: 20px calc(50% - 160px) 25px calc(50% - 160px);
+    padding: 20px -webkit-calc(50% - 160px) 25px -webkit-calc(50% - 160px);
+  }
+
+  .border-picture-frame-portrait {
+    padding: 25px;
+    border: solid 25px #222;
+  }
 }
 
 @media only screen and (min-width:768px) {
@@ -214,10 +314,85 @@ h1 {
 	.item { 
 		width: calc(33.33% - 10px); 
 	}
+
+	p {
+		font-size: 18px;
+		line-height: 1.72222;
+	}
+
+  .border-macbook {
+    background: url("img/device-border-macbook-740.png") no-repeat scroll center top transparent;
+    padding: 44px calc(50% - 261px) 65px calc(50% - 261px);
+    padding: 44px -webkit-calc(50% - 261px) 65px -webkit-calc(50% - 261px);
+  }
+
+  .border-ipad-mini {
+    background: url("img/device-border-ipad-mini-740.png") no-repeat scroll center top transparent;
+    padding: 90px calc(50% - 206px) 118px calc(50% - 201px);
+    padding: 90px -webkit-calc(50% - 206px) 118px -webkit-calc(50% - 201px);
+  }
+
+  .border-ipad-mini-landscape {
+    background: url("img/device-border-ipad-mini-landscape-740.png") no-repeat scroll center top transparent;
+    padding: 58px 126px 46px 110px;
+    padding: 58px calc(50% - 244px) 46px calc(50% - 260px);
+    padding: 58px -webkit-calc(50% - 244px) 46px -webkit-calc(50% - 260px);
+  }
+
+  .border-iphone5 {
+    background: url("img/device-border-iphone5-740.png") no-repeat scroll center top transparent;
+    padding: 88px calc(50% - 89px) 80px calc(50% - 89px);
+    padding: 88px -webkit-calc(50% - 89px) 80px -webkit-calc(50% - 89px);
+  }
+
+  .picture-frame-container-portrait {
+    padding: 30px calc(50% - 215px) 30px calc(50% - 215px);
+  }
+
+  .border-picture-frame-portrait {
+    padding: 40px;
+  }
 }
 
 @media only screen and (min-width:1024px) {
+	/* Set device chrome to go around screen grabs as CSS backgrounds */
+	.border-macbook {
+	  background: url("img/device-border-macbook-960.png") no-repeat scroll center top transparent;
+	  padding: 56px calc(50% - 338px) 90px calc(50% - 338px);
+	  padding: 56px -webkit-calc(50% - 338px) 90px -webkit-calc(50% - 338px);
+	  width: 676px;
+	  height: 422px;
+	}
 
+	.border-ipad-mini {
+	  background: url("img/device-border-ipad-mini-960.png") no-repeat scroll center top transparent;
+	  padding: 118px calc(50% - 264px) 118px calc(50% - 264px);
+	  padding: 118px -webkit-calc(50% - 264px) 118px -webkit-calc(50% - 264px);
+	  width: 528px;
+	  height: 704px;
+	}
+
+	.border-ipad-mini-landscape {
+	  background: url("img/device-border-ipad-mini-landscape-960.png") no-repeat scroll center top transparent;
+	  padding: 73px calc(50% - 317px) 60px calc(50% - 338px);
+	  padding: 73px -webkit-calc(50% - 317px) 60px  -webkit-calc(50% - 338px);
+	  width: 655px;
+	  height: 492px;
+	}
+
+	.border-iphone5 {
+	  background: url("img/device-border-iphone5-960.png") no-repeat scroll center top transparent;
+	  padding: 116px calc(50% - 115px) 100px calc(50% - 115px);
+	  padding: 116px -webkit-calc(50% - 115px) 100px -webkit-calc(50% - 115px);
+	  width: 230px;
+	  height: 409px;
+	}
+
+	/* Image is 400px wide + 40px of padding and 25px of border on each side */
+	.picture-frame-container-portrait {
+	  padding: 30px calc(50% - 265px) 30px calc(50% - 265px);
+	  padding: 30px -webkit-calc(50% - 265px) 30px -webkit-calc(50% - 265px);
+	}
 }
 
 @media only screen and (min-width:1140px) {
@@ -261,7 +436,7 @@ h1 {
 \*------------------------------------*/
 
 .alignnone {
-	margin:5px 20px 20px 0;
+	margin: 0px;
 }
 .aligncenter,
 div.aligncenter {
@@ -281,7 +456,7 @@ a img.alignright {
 	margin:5px 0 20px 20px;
 }
 a img.alignnone {
-	margin:5px 20px 20px 0;
+	margin: 0px;
 }
 a img.alignleft {
 	float:left;
