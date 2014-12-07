@@ -16,6 +16,17 @@
 
 		<?php wp_footer(); ?>
 
+		<!-- Masonry layout -->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/lib/masonry.pkgd.js"></script>
+		<script>
+			var container = document.querySelector('#container');
+			var msnry = new Masonry( container, {
+				// options
+				itemSelector: '.item',
+				gutter: 10
+			});
+		</script>
+
 		<!-- analytics -->
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

@@ -31,7 +31,8 @@ html {
 }
 body {
 	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
+	color:#0e2d43;
+	background: #ffffff;
 }
 /* clear */
 .clear:before,
@@ -51,11 +52,11 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#444;
+	color:#1ABC9C;
 	text-decoration:none;
 }
 a:hover {
-	color:#444;
+	color:#E74C3C;
 }
 a:focus {
 	outline:0;
@@ -75,8 +76,10 @@ input:focus {
 
 /* wrapper */
 .wrapper {
+	/*
 	max-width:1280px;
 	width:95%;
+	*/
 	margin:0 auto;
 	position:relative;
 }
@@ -102,6 +105,47 @@ input:focus {
 /* footer */
 .footer {
 
+}
+
+/*------------------------------------*\
+    GRID LAYOUT
+\*------------------------------------*/
+
+/* Masonry article item in grid */
+.item { 
+	width: 100%; 
+	transition: background 0.2s ease;
+	background: #ffffff;
+	margin-bottom: 10px;
+}
+
+.item:hover {
+	background: #F9756F;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.item h2 {
+	font-size: 12px;
+	font-style: normal;
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+
+.item a {
+	color:#888888;
+	text-decoration:none;
+}
+
+.item a:hover {
+	color: #ffffff;
+}
+
+/* WP thumbnail image should stretch to fill Masonry item container */
+img.wp-post-image {
+	width: 100%;
+	height: auto;
 }
 
 /*------------------------------------*\
@@ -131,6 +175,14 @@ input:focus {
     font-style:normal;
 }
 
+h1 {
+	color:#1ABC9C;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	font-size: 40px;
+	margin: 0px;
+}
+
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
@@ -138,18 +190,44 @@ input:focus {
 @media only screen and (min-width:320px) {
 
 }
+
 @media only screen and (min-width:480px) {
 
+	/* Masonry container */
+	#container {
+		/* We've set a 10px gutter in Masonry, meaning the item widths need to be
+		   their percentage minus 10px. This results in 10px on the right, so we
+		   add 10px on the left to balance it up */
+		margin-left: 10px;
+	}
+
+	/* Masonry article item in grid */
+	.item { 
+		width: calc(50% - 10px); 
+		padding: 5px;
+	}
 }
+
 @media only screen and (min-width:768px) {
 
+	/* Masonry article item in grid */
+	.item { 
+		width: calc(33.33% - 10px); 
+	}
 }
+
 @media only screen and (min-width:1024px) {
 
 }
+
 @media only screen and (min-width:1140px) {
 
+	/* Masonry article item in grid */
+	.item { 
+		width: calc(25% - 10px); 
+	}
 }
+
 @media only screen and (min-width:1280px) {
 
 }
